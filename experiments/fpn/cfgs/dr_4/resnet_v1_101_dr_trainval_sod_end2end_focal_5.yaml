@@ -53,9 +53,9 @@ TRAIN:
   warmup_step: 250
   warmup: true
   # lr: 0.000001
-  lr_step: '16,18'
+  lr_step: '17,19'
   wd: 0.0001
-  begin_epoch: 12
+  begin_epoch: 13
   end_epoch: 25
   model_prefix: 'fpn_dr'
   # whether resume training
