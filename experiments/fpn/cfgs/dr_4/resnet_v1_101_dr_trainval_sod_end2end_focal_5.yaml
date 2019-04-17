@@ -2,11 +2,11 @@
 MXNET_VERSION: "python"
 output_path: "/data0/qilei_chen/AI_EYE/BostonAI4DB9/sod_baseline5"
 symbol: resnet_v1_101_fpn_rcnn_sod_l0_focal_v5
-gpus: '1,2'
+gpus: '1'
 CLASS_AGNOSTIC: false
 SCALES:
-- 896
-- 896
+- 960
+- 960
 # TEST_SCALES: [[800, 1280]] # single scale testing
 TEST_SCALES: [[800,800],[960,960],[1120, 1120]] # multi-scale testing
 default:
@@ -48,15 +48,15 @@ dataset:
   test_image_set: val2014
   proposal: rpn
 TRAIN:
-  lr: 0.0025
+  lr: 0.00125
   warmup_lr: 0.001
   warmup_step: 250
   warmup: true
   # lr: 0.000001
-  lr_step: '22,24'
+  lr_step: '24,26'
   wd: 0.0001
-  begin_epoch: 18
-  end_epoch: 25
+  begin_epoch: 20
+  end_epoch: 30
   model_prefix: 'fpn_dr'
   # whether resume training
   RESUME: true
