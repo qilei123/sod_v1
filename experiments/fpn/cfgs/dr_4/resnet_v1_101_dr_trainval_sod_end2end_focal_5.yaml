@@ -5,8 +5,8 @@ symbol: resnet_v1_101_fpn_rcnn_sod_l0_focal_v5
 gpus: '1'
 CLASS_AGNOSTIC: false
 SCALES:
-- 960
-- 960
+- 896
+- 896
 # TEST_SCALES: [[800, 1280]] # single scale testing
 TEST_SCALES: [[800,800],[960,960],[1120, 1120]] # multi-scale testing
 default:
@@ -48,7 +48,7 @@ dataset:
   test_image_set: val2014
   proposal: rpn
 TRAIN:
-  lr: 0.00125
+  lr: 0.0025
   warmup_lr: 0.001
   warmup_step: 250
   warmup: true
